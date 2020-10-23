@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection: Int? = nil
-    @State private var attempts: Int? = nil
+    @State private var attempts: Int = 5
     @State private var guessed_num: String = UserDefaults.standard.string(forKey: "guessed_num") ?? ""
     //@State private var temp_num: String? = ;
     
@@ -24,7 +24,17 @@ struct ContentView: View {
                 
                 TextField("Enter your guessed number", text: self.$guessed_num)
                 
-                Text("You have to guess a number between 1 to 25. You have 5 attempts. Can you guess the number correctly?")
+                Text("\(self.attempts) attempts left")
+                
+                Button(action: {
+
+                }) {
+                    Text("Check Answer")
+                        .accentColor(Color.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(5.0)
+                }
 
           }
             .navigationBarTitle(Text("Muhammad_GuessingGame"), displayMode: .inline)
