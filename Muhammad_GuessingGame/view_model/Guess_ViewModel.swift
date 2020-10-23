@@ -11,7 +11,7 @@ import SwiftUI
 import UIKit
 
 public class Guess_ViewModel : ObservableObject {
-
+    @FetchRequest(entity: GuessingGame.entity(), sortDescriptors: []) var todo_tasks: FetchedResults<GuessingGame>
     
     private let moc : NSManagedObjectContext
     
@@ -19,6 +19,15 @@ public class Guess_ViewModel : ObservableObject {
         self.moc = context
     }
     
-    
+    func insertVal(value: Bool){
+       
+        do{
+
+            
+        }catch let error as NSError{
+            print("Something went wrong. Couldn't add value:(.")
+            print("\(error) \(error.localizedDescription)")
+        }
+    }
 
 }
