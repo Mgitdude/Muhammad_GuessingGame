@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection: Int? = nil
+
     @State private var attempts: Int = 5
     @State private var guessed_num: String = UserDefaults.standard.string(forKey: "guessed_num") ?? ""
     @State private var hint_message: String = UserDefaults.standard.string(forKey: "hint_message") ?? ""
