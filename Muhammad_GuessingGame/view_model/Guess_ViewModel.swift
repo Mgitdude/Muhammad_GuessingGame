@@ -18,5 +18,7 @@ public class Guess_ViewModel : ObservableObject {
     init(context: NSManagedObjectContext){
         self.moc = context
     }
+    
+    
 
 }

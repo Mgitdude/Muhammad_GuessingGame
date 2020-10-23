@@ -16,6 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
+            var gg = GuessGame(value: Int.random(in:1...25))
             VStack{
            /* NavigationLink(destination: ScoreView(), tag: 1, selection: $selection) {}*/
                 Spacer()
@@ -24,11 +25,18 @@ struct ContentView: View {
                 
                 Text("You have to guess a number between 1 to 25. You have 5 attempts. Can you guess the number correctly?")
                 
-                TextField("Enter your guessed number", text: self.$guessed_num)
+                TextField("Enter your guessed number", text: self.$guessed_num).keyboardType(.decimalPad)
                 
                 Text("\(self.attempts) attempts left")
                 
                 Button(action: {
+                    if(self.guessed_num.isEmpty){
+                        self.hint_message = "Please enter a number"
+                    }
+                    if(gg.value == Int(self.guessed_num)){
+                        
+                    }
+                    
 
                 }) {
                     Text("Check Answer")
