@@ -11,12 +11,14 @@ struct ContentView: View {
     @State private var selection: Int? = nil
     @State private var attempts: Int = 5
     @State private var guessed_num: String = UserDefaults.standard.string(forKey: "guessed_num") ?? ""
+    @State private var hint_message: String = UserDefaults.standard.string(forKey: "hint_message") ?? ""
     //@State private var temp_num: String? = ;
     
     var body: some View {
         NavigationView{
             VStack{
            /* NavigationLink(destination: ScoreView(), tag: 1, selection: $selection) {}*/
+                Spacer()
                 Text("Guessing Game")
                     .foregroundColor(Color.blue)
                 
@@ -35,6 +37,8 @@ struct ContentView: View {
                         .background(Color.blue)
                         .cornerRadius(5.0)
                 }
+                Spacer()
+                Text("\(self.hint_message)")
 
           }
             .navigationBarTitle(Text("Muhammad_GuessingGame"), displayMode: .inline)
