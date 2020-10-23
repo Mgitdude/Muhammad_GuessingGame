@@ -58,9 +58,11 @@
 		C652CC6A254306EC00DF94E6 /* Muhammad_GuessingGame */ = {
 			isa = PBXGroup;
 			children = (
+				C652CC8F25430B1A00DF94E6 /* view */,
+				C652CC84254309EA00DF94E6 /* view_model */,
+				C652CC83254309DE00DF94E6 /* model */,
 				C652CC6B254306EC00DF94E6 /* AppDelegate.swift */,
 				C652CC6D254306ED00DF94E6 /* SceneDelegate.swift */,
-				C652CC6F254306ED00DF94E6 /* ContentView.swift */,
 				C652CC74254306ED00DF94E6 /* Assets.xcassets */,
 				C652CC79254306ED00DF94E6 /* LaunchScreen.storyboard */,
 				C652CC7C254306ED00DF94E6 /* Info.plist */,
@@ -76,6 +78,28 @@
 				C652CC77254306ED00DF94E6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C652CC83254309DE00DF94E6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C652CC84254309EA00DF94E6 /* view_model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view_model;
+			sourceTree = "<group>";
+		};
+		C652CC8F25430B1A00DF94E6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C652CC6F254306ED00DF94E6 /* ContentView.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
